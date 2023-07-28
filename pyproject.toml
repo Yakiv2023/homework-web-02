@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "homework-web-02"
+version = "0.1.0"
+description = ""
+authors = ["Yakiv2023 <127395747+Yakiv2023@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "homework_web_02"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^68.0.0"
+pytest = "^7.4.0"
+datetime = "^5.2"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
