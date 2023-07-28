@@ -1,0 +1,17 @@
+# Використовуємо офіційний базовий образ Python
+FROM python:3.7
+
+# Встановлюємо Poetry у контейнері
+RUN curl -sSL https://install.python-poetry.org | python -
+
+# Переконуємося, що контейнер працюватиме у папці /app
+WORKDIR /app
+
+# Копіюємо файли нашого застосунку в контейнер
+COPY . /app
+
+# Встановлюємо залежності з використанням Poetry
+RUN poetry install
+
+# Запускаємо наш застосунок при старті контейнера
+CMD ["python", "setup.py"]
